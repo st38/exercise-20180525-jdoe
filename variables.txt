@@ -1,0 +1,30 @@
+# Define tasks variables
+
+region="eu-central-1"
+project_name="Haring"
+environment="Staging"
+role="Web"
+creator="VD"
+
+prefixes="a b c"
+security_group_name="${project_name}-${role}"
+security_group_description="SG for ${role} servers"
+
+domain_name="domain.tld"
+instance_type="t2.nano"
+user_data_file="instances-user-data.txt"
+stop_instance_prefix="a"
+
+tcp_port=8080
+http_protocol=http
+http_port="${tcp_port}"
+
+images_retention_days="7"
+
+task01_name="Prepare environment"
+task02_name="Run exercise"
+task03_name="Clean environment"
+
+task01_file=01-prepare-environment.sh
+task02_file=02-run-exercise.sh
+task03_file=03-clean-environment.sh
